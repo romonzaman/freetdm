@@ -1960,7 +1960,7 @@ static int on_ring(lpwrap_pri_t *spri, lpwrap_pri_event_t event_type, pri_event 
 	}
 
 	if (pevent->ring.ani2 >= 0) {
-		snprintf(caller_data->aniII, 5, "%.2d", pevent->ring.ani2);
+		snprintf(caller_data->aniII, sizeof(caller_data->aniII), "%.2d", pevent->ring.ani2);
 	}
 
 	// scary to trust this pointer, you'd think they would give you a copy of the call data so you own it......

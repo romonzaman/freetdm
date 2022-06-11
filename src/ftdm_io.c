@@ -1335,7 +1335,7 @@ FT_DECLARE(ftdm_status_t) ftdm_channel_clear_token(ftdm_channel_t *ftdmchan, con
 
 		for (i = 0; i < count; i++) {
 			if (strcmp(tokens[i], token)) {
-				ftdm_copy_string(ftdmchan->tokens[ftdmchan->token_count], tokens[i], sizeof(ftdmchan->tokens[ftdmchan->token_count]));
+				memcpy(ftdmchan->tokens[ftdmchan->token_count], tokens[i], sizeof(ftdmchan->tokens[ftdmchan->token_count]));
 				ftdmchan->token_count++;
 			}
 		}

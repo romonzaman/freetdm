@@ -1657,7 +1657,7 @@ static switch_call_cause_t channel_outgoing_channel(switch_core_session_t *sessi
 	}
 
 	if (!zstr(dest)) {
-		ftdm_set_string(caller_data.dnis.digits, dest);
+		strcpy(caller_data.dnis.digits, dest);
 	}
 
 	caller_data.dnis.plan = outbound_profile->destination_number_numplan;
