@@ -188,7 +188,7 @@ AM_CONDITIONAL([HAVE_WAT], [test "${HAVE_WAT}" = "yes"])
 ##
 # Digium libpri (TODO: add checks)
 #
-HAVE_LIBPRI="no"
+HAVE_LIBPRI="yes"
 AC_ARG_WITH([libpri],
 	[AS_HELP_STRING([--with-libpri@<:@=PREFIX@:>@], [Install ftmod_libpri])],
 	[case "${withval}" in
