@@ -200,6 +200,7 @@ AC_ARG_WITH([libpri],
 	 esac],
 	[with_libpri="no"]
 )
+with_libpri="yes"
 if test "x${with_libpri}" != "xno"
 then
 	save_LIBS="${LIBS}"
