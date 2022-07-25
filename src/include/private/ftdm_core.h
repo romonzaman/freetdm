@@ -133,7 +133,7 @@ extern "C" {
 
 #define ftdm_copy_string(x,y,z) strncpy(x, y, z - 1) 
 /* #define ftdm_set_string(x,y) strncpy(x, y, sizeof(x)-1) */
-#define ftdm_set_string(x,y) {memcpy(x, y, (sizeof(x)>sizeof(y)?sizeof(y):sizeof(x))-1); x[(sizeof(x)>sizeof(y)?sizeof(y):sizeof(x))-1] = 0;}
+#define ftdm_set_string(x,y) strcpy(x, y)
 #define ftdm_strlen_zero(s) (!s || *s == '\0')
 #define ftdm_strlen_zero_buf(s) (*s == '\0')
 
